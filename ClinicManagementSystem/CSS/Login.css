@@ -1,0 +1,13 @@
+﻿body {
+}
+
+
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Light transparent background */
+    padding:30px;
+}
+
+.T{
+    text-align:center
+}
