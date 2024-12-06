@@ -40,12 +40,12 @@
   </div>
 </nav>
      <div class="container-fluid">
-        <div class="row" style="background-image:url(../../Assets/Images/home.jpg);height:435px;background-size:cover">
+        <div class="row" style="background-image:url(../../Assets/Images/home.jpg);height:405px;background-size:cover">
              <div class="col-md-1">
 
              </div>
-            <div class="col-md-5">
-                <div class="row" style="height:100px"></div>
+            <div class="col-md-5 align-content-center" >
+                <%--<div class="row" style="height:90px"></div>--%>
                 <h2>Your Health is our only Priority</h2>
                 <h2>Always Serving You and Taking Care</h2>
                 <p class="h6">Our Clinic has been created in 2019 by a group of persons </p>
@@ -56,37 +56,37 @@
         </div>
         <div class="row bg-primary">
             <div class="row" style="height:20px"></div>
-                <div class="row">
-                    <div class="col-md-3 bg-light offset-1 rounded-3">
+                <div class="row justify-content-around">
+                    <div class="col-md-3 bg-light  rounded-3">
                        <div class="row ">
-                           <div class="col-2">
+                           <div class="col-3 align-content-center">
                                <img src="../../Assets/Images/surgery.png" style="width: 40px; height: 40px; object-fit: contain;" />
                            </div>
                            <div class="col-7">
-                               <h5 class="text-center">Surgery</h5>
-                               <p class="h6">The Clinic has a Surgery Department with heighly qualified Doctors.</p>
+                               <h5 class="text-center p-2">Surgery</h5>
+                               <p class="h6">The Clinic has a Surgery Department with highly qualified Doctors.</p>
                            </div>
                        </div>
                    </div>
-                   <div class="col-md-3 bg-light offset-1 rounded-3">
+                   <div class="col-md-3 bg-light  rounded-3">
                        <div class="row ">
-                            <div class="col-2">
+                            <div class="col-3 align-content-center">
                                 <img src="../../Assets/Images/surgery.png" style="width: 40px; height: 40px; object-fit: contain;" />
                             </div>
                             <div class="col-7">
-                                <h5 class="text-center">Urology</h5>
-                                <p class="h6">The Clinic has a Surgery Department with heighly qualified Doctors.</p>
+                                <h5 class="text-center p-2">Urology</h5>
+                                <p class="h6">The Clinic has a Urology Department with highly qualified Doctors.</p>
                             </div>
                         </div>
                    </div>
-                   <div class="col-md-3 bg-light offset-1 rounded-3">
+                   <div class="col-md-3 bg-light rounded-3">
                        <div class="row ">
-                            <div class="col-2">
+                            <div class="col-3 align-content-center">
                                 <img src="../../Assets/Images/surgery.png" style="width: 40px; height: 40px; object-fit: contain;" />
                             </div>
                             <div class="col-7">
-                                <h5 class="text-center">Ophtalmology</h5>
-                                <p class="h6">The Clinic has a Surgery Department with heighly qualified Doctors.</p>
+                                <h5 class="text-center p-2">Ophtalmology</h5>
+                                <p class="h6">The Clinic has a Ophtalmology Department with highly qualified Doctors.</p>
                             </div>
                         </div>
                    </div>
