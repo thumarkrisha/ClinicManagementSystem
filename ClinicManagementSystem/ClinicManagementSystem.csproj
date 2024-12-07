@@ -109,9 +109,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
@@ -186,7 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Doctors\" />
     <Folder Include="Views\Laboratorian\" />
     <Folder Include="Views\Recepionist\" />

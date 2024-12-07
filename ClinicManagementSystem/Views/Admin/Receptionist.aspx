@@ -9,39 +9,35 @@
              <form>
               <div class="mb-3">
                 <label for="RecNameb" class="form-label">Name</label>
-                <input type="text" class="form-control" id="RecNameTb"/>
+                <input type="text" runat="server" class="form-control" id="RecNameTb" required="required"/>
               </div>
 
               <div class="mb-3">
                 <label for="RecEmailTb" class="form-label">Email</label>
-                <input type="text" class="form-control" id="RecEmailTb"/>
+                <input type="text" runat="server" class="form-control" id="RecEmailTb" required="required"/>
               </div>
 
               <div class="mb-3">
                 <label for="PasswordTb" class="form-label">Password</label>
-                <input type="text" class="form-control" id="PasswordTb" />
+                <input type="password" runat="server" class="form-control" id="PasswordTb" required="required"/>
               </div>
 
               <div class="mb-3">
                  <label for="PhoneTb" class="form-label">Phone</label>
-                 <input type="text" class="form-control" id="PhoneTb"/>
+                 <input type="text" runat="server" class="form-control" id="PhoneTb" required="required"/>
               </div>
 
-             <div class="mb-3">
+              <div class="mb-3">
                   <label for="AddressTb" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="AddressTb"/>
-                </div>
+                  <input type="text" runat="server" class="form-control" id="AddressTb" required="required"/>
+              </div>
 
-            <div class="mb-3">
-              <label for="GenderCb" class="form-label">Gender</label>
-              <input type="password" class="form-control" id="GenderCb"/>
-            </div>
-
-              <button type="submit" class="btn btn-warning">Edit</button>
-              <button type="submit" class="btn btn-danger">Save</button>
-              <button type="submit" class="btn btn-primary">Delete</button>
+              <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />
+              <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit"></asp:Button>
+              <asp:Button ID="SaveBtn" runat="server" class="btn btn-primary" Text="Save" OnClick="SaveBtn_Click"></asp:Button>
+              <asp:Button ID="DeleteBtn" runat="server" class="btn btn-danger" Text="Delete"></asp:Button>
             </form>
-         </div>
+         </div> 
          <div class="col-md-8">
              <div class="row">
                  <div class="col">
@@ -51,7 +47,19 @@
              <div class="row">
                   <div class="col">
                      <h1>Receptionist Details</h1>
-                      <asp:GridView ID="DoctorsGV" class="table table-hover" runat="server"></asp:GridView>
+                      <asp:GridView ID="ReceptionistGV" class="table table-hover" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                          <AlternatingRowStyle BackColor="White" />
+                          <EditRowStyle BackColor="#2461BF" />
+                          <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                          <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                          <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                          <RowStyle BackColor="#EFF3FB" />
+                          <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                          <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                          <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                          <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                          <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                      </asp:GridView>
                  </div>
              </div>
          </div>
