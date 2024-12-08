@@ -19,7 +19,7 @@
 
               <div class="mb-3">
                 <label for="PasswordTb" class="form-label">Password</label>
-                <input type="password" runat="server" class="form-control" id="PasswordTb" required="required"/>
+                <input type="text" runat="server" class="form-control" id="PasswordTb" required="required"/>
               </div>
 
               <div class="mb-3">
@@ -33,9 +33,9 @@
               </div>
 
               <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />
-              <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit"></asp:Button>
+              <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit" OnClick="EditBtn_Click" ></asp:Button>
               <asp:Button ID="SaveBtn" runat="server" class="btn btn-primary" Text="Save" OnClick="SaveBtn_Click"></asp:Button>
-              <asp:Button ID="DeleteBtn" runat="server" class="btn btn-danger" Text="Delete"></asp:Button>
+              <asp:Button ID="DeleteBtn" runat="server" class="btn btn-danger" Text="Delete" OnClick="DeleteBtn_Click"></asp:Button>
             </form>
          </div> 
          <div class="col-md-8">
@@ -47,7 +47,7 @@
              <div class="row">
                   <div class="col">
                      <h1>Receptionist Details</h1>
-                      <asp:GridView ID="ReceptionistGV" class="table table-hover" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                      <asp:GridView ID="ReceptionistGV" class="table table-hover" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateSelectButton="True" OnSelectedIndexChanged="ReceptionistGV_SelectedIndexChanged">
                           <AlternatingRowStyle BackColor="White" />
                           <EditRowStyle BackColor="#2461BF" />
                           <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

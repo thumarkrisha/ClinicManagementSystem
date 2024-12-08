@@ -39,7 +39,7 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText PasswordTb;
 
         /// <summary>
         /// PhoneTb control.
