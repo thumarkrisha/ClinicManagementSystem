@@ -35,8 +35,8 @@
                 <div class="mb-3">
                   <label for="GenderCb" class="form-label">Gender</label>
                    <asp:DropDownList ID="GenderCb" class="form-control" runat="server">
-                       <asp:ListItem>Male</asp:ListItem>
-                       <asp:ListItem>Female</asp:ListItem>
+                       <asp:ListItem Value="Male">Male</asp:ListItem>
+                       <asp:ListItem Value="Female">Female</asp:ListItem>
                    </asp:DropDownList>
                   
                 </div>
@@ -53,9 +53,9 @@
 
                   
               <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />
-              <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit"  ></asp:Button>
+              <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit" OnClick="EditBtn_Click"  ></asp:Button>
               <asp:Button ID="SaveBtn" runat="server" class="btn btn-primary" Text="Save" OnClick="SaveBtn_Click" ></asp:Button>
-              <asp:Button ID="DeleteBtn" runat="server" class="btn btn-danger" Text="Delete"></asp:Button>
+              <asp:Button ID="DeleteBtn" runat="server" class="btn btn-danger" Text="Delete" OnClick="DeleteBtn_Click"></asp:Button>
                 </form>
              </div>
              <div class="col-md-9">
