@@ -102,6 +102,7 @@
     <Content Include="Views\Admin\Laboratorians.aspx" />
     <Content Include="Views\Admin\Receptionist.aspx" />
     <Content Include="Views\Guest\Home.aspx" />
+    <Content Include="Views\Laboratorian\LabTest.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -146,6 +147,20 @@
     <Compile Include="Views\Guest\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Laboratorian\LaboratorianMaster.Master.cs">
+      <DependentUpon>LaboratorianMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Laboratorian\LaboratorianMaster.Master.designer.cs">
+      <DependentUpon>LaboratorianMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Laboratorian\LabTest.aspx.cs">
+      <DependentUpon>LabTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Laboratorian\LabTest.aspx.designer.cs">
+      <DependentUpon>LabTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,6 +194,7 @@
     <Content Include="Libs\Bootstrap\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="Views\Admin\AdminMaster.Master" />
+    <Content Include="Views\Laboratorian\LaboratorianMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,7 +205,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Doctors\" />
-    <Folder Include="Views\Laboratorian\" />
     <Folder Include="Views\Recepionist\" />
   </ItemGroup>
   <PropertyGroup>
