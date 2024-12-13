@@ -88,7 +88,7 @@ namespace ClinicManagementSystem.Views.Admin
             catch (Exception ex)
             {
                 ErrMsg.Text = ex.Message;
-            }
+            } 
         }
         int key = 0;
         protected void LaboratorianGV_SelectedIndexChanged(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace ClinicManagementSystem.Views.Admin
             AddressTb.Value = LaboratorianGV.SelectedRow.Cells[6].Text;
             GenderCb.SelectedValue = LaboratorianGV.SelectedRow.Cells[7].Text;
             
-            Response.Write(GenderCb.SelectedItem.Value +" " + LaboratorianGV.SelectedRow.Cells[7].Text);
+          //  Response.Write(GenderCb.SelectedItem.Value +" " + LaboratorianGV.SelectedRow.Cells[7].Text);
 
             if (LabNameTb.Value == "")
             {

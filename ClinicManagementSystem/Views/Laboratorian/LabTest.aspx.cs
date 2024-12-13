@@ -16,6 +16,10 @@ namespace ClinicManagementSystem.Views.Laboratorian
             con = new Models.Functions();
             showTests();
         }
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            
+        }
         private void showTests()
         {
             string query = "select * from LabTestTbl";

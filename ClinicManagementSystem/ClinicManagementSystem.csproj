@@ -104,6 +104,7 @@
     <Content Include="Views\Guest\Home.aspx" />
     <Content Include="Views\Laboratorian\LabTest.aspx" />
     <Content Include="Views\Login.aspx" />
+    <Content Include="Views\Receptionist\Patients.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,20 @@
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Receptionist\Patients.aspx.cs">
+      <DependentUpon>Patients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Receptionist\Patients.aspx.designer.cs">
+      <DependentUpon>Patients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Receptionist\ReceptionistMaster.Master.cs">
+      <DependentUpon>ReceptionistMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Receptionist\ReceptionistMaster.Master.designer.cs">
+      <DependentUpon>ReceptionistMaster.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Libs\Bootstrap\css\bootstrap-grid.css.map" />
@@ -195,6 +210,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Admin\AdminMaster.Master" />
     <Content Include="Views\Laboratorian\LaboratorianMaster.Master" />
+    <Content Include="Views\Receptionist\ReceptionistMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -205,7 +221,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Doctors\" />
-    <Folder Include="Views\Recepionist\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

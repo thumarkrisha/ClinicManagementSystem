@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ReceptionistMaster.master.cs" Inherits="ClinicManagementSystem.Views.Recepionist.ReceptionistMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title></title>
+     <link rel="stylesheet" href="../../Libs/Bootstrap/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-warning bg-warning text-white">
+  <a class="navbar-brand" href="#">Clinic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="">Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">Laboratorian</a>
+      </li>
+        <li class="nav-item">
+         <a class="nav-link" href="">Receptionist</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="../Login.aspx">Logout</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+</nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="Mybody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
