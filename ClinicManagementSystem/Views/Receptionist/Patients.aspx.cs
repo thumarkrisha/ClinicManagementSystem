@@ -122,7 +122,7 @@ namespace ClinicManagementSystem.Views.Receptionist
                 string PAdd = AddressTb.Value.ToString();
                 string PAllergy = AllergyTb.Value.ToString();
                 //Response.Write(RName);
-                string Query = "update PatientTbl set PatName = '{0}',PatPhone = '{1}' ,PatGen = '{2}',PatDOB = '{3}',PatAdd = '{4}' , PatAllergies ='{5}' where Patid = {6}";
+                string Query = "update PatientTbl set PatName = '{0}',PatPhone = '{1}' ,PatGen = '{2}',PatDOB = '{3}',PatAdd = '{4}' , PatAllergies ='{5}' where PatId = {6}";
                 Query = string.Format(Query,PName,PPhone,PGen,PDOB,PAdd,PAllergy, PatientList.SelectedRow.Cells[1].Text);
 
                 con.SetDatas(Query);

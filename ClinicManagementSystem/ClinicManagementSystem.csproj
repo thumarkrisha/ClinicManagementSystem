@@ -101,6 +101,7 @@
     <Content Include="Views\Admin\Doctors.aspx" />
     <Content Include="Views\Admin\Laboratorians.aspx" />
     <Content Include="Views\Admin\Receptionist.aspx" />
+    <Content Include="Views\Doctors\Prescriptions.aspx" />
     <Content Include="Views\Guest\Home.aspx" />
     <Content Include="Views\Laboratorian\LabTest.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -140,6 +141,20 @@
     </Compile>
     <Compile Include="Views\Admin\Receptionist.aspx.designer.cs">
       <DependentUpon>Receptionist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doctors\DoctorMaster.Master.cs">
+      <DependentUpon>DoctorMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Doctors\DoctorMaster.Master.designer.cs">
+      <DependentUpon>DoctorMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doctors\Prescriptions.aspx.cs">
+      <DependentUpon>Prescriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Doctors\Prescriptions.aspx.designer.cs">
+      <DependentUpon>Prescriptions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Guest\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -211,6 +226,7 @@
     <Content Include="Views\Admin\AdminMaster.Master" />
     <Content Include="Views\Laboratorian\LaboratorianMaster.Master" />
     <Content Include="Views\Receptionist\ReceptionistMaster.Master" />
+    <Content Include="Views\Doctors\DoctorMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -220,7 +236,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Doctors\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

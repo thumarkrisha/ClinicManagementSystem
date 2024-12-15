@@ -93,7 +93,7 @@ namespace ClinicManagementSystem.Views.Admin
                 }
                 else
                 {
-                    string query = "delete from DoctorTbl where RecId={0}";
+                    string query = "delete from DoctorTbl where DocId={0}";
                     query = string.Format(query, DoctorsGV.SelectedRow.Cells[1].Text);
                     con.SetDatas(query);
                     showDoctors();
