@@ -38,9 +38,10 @@ namespace ClinicManagementSystem.Views.Admin
                 string DAdd = AddressTb.Value.ToString();
                 DateTime DDOB = (DateTime.Parse(DOBTb.Value)).Date;
                 string DPass = PasswordTb.Value.ToString();
-                Response.Write(DDOB);
-                string Query = "insert into DoctorTbl values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}')";
-                Query = string.Format(Query, DName,DPhone,DExp,DSpec,DGen,DAdd,DDOB,DPass);
+                string DEmail = EmailTb.Value.ToString();
+                //Response.Write(DDOB);
+                string Query = "insert into DoctorTbl values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')";
+                Query = string.Format(Query, DName,DPhone,DExp,DSpec,DGen,DAdd,DDOB,DPass,DEmail);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Doctor Added!!!";
@@ -53,7 +54,7 @@ namespace ClinicManagementSystem.Views.Admin
                 GenderCb.SelectedIndex = -1;
                 SpecialisationTb.Value = "";
                 DOBTb.Value = "";
-
+                EmailTb.Value = "";
             }
             catch (Exception ex)
             {
@@ -70,8 +71,8 @@ namespace ClinicManagementSystem.Views.Admin
             GenderCb.SelectedValue = DoctorsGV.SelectedRow.Cells[6].Text;
             AddressTb.Value = DoctorsGV.SelectedRow.Cells[7].Text;
             DOBTb.Value= DoctorsGV.SelectedRow.Cells[8].Text;
-            PasswordTb.Value = DoctorsGV.SelectedRow.Cells[9].Text; 
-
+            PasswordTb.Value = DoctorsGV.SelectedRow.Cells[9].Text;
+            EmailTb.Value = DoctorsGV.SelectedRow.Cells[10].Text;
             if (DocNameTb.Value == "")
             {
                 key = 0;
@@ -107,6 +108,7 @@ namespace ClinicManagementSystem.Views.Admin
                     GenderCb.SelectedIndex = -1;
                     SpecialisationTb.Value = "";
                     DOBTb.Value = "";
+                    EmailTb.Value = "";
                 }
 
             }
@@ -128,9 +130,10 @@ namespace ClinicManagementSystem.Views.Admin
                 string DAdd = AddressTb.Value.ToString();
                 string DDOB = DOBTb.Value.ToString();
                 string DPass = PasswordTb.Value.ToString();
+                string DEmail = EmailTb.Value.ToString();
                 //Response.Write(RName);
-                string Query = "update DoctorTbl set DocName = '{0}',DocPhone = '{1}' ,DocExp = {2},DocSpec = '{3}',DocGen = '{4}',DocAdd = '{5}',DocDOB = '{6}',DocPassword = '{7}' where RecId = {8}";
-                Query = string.Format(Query, DName, DPhone, DExp, DSpec, DGen, DAdd, DDOB, DPass, DoctorsGV.SelectedRow.Cells[1].Text);
+                string Query = "update DoctorTbl set DocName = '{0}',DocPhone = '{1}' ,DocExp = {2},DocSpec = '{3}',DocGen = '{4}',DocAdd = '{5}',DocDOB = '{6}',DocPassword = '{7}',DocEmail = '{8}' where RecId = {9}";
+                Query = string.Format(Query, DName, DPhone, DExp, DSpec, DGen, DAdd, DDOB, DPass,DEmail, DoctorsGV.SelectedRow.Cells[1].Text);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Doctor Updated!!!";
@@ -143,7 +146,7 @@ namespace ClinicManagementSystem.Views.Admin
                 GenderCb.SelectedIndex = -1;
                 SpecialisationTb.Value = "";
                 DOBTb.Value = "";
-
+                EmailTb.Value = "";
             }
             catch (Exception ex)
             {

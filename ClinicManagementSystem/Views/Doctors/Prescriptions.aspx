@@ -38,11 +38,7 @@
             </form>
          </div>
          <div class="col-md-8">
-             <div class="row">
-                 <div class="col">
-                     <img src="../../Assets/Images/lab.png" width="100%" height="300px" class="rounded-3"/>
-                 </div>
-             </div>
+             
              <div class="row">
                   <div class="col">
                      <h1>Presciption Details</h1>

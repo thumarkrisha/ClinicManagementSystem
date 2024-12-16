@@ -19,19 +19,27 @@
                 <form  id="form1" runat="server">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="Email" required="required" runat="server">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="Password" required="required" runat="server" >
                   </div>
                   <div class="mb-3 form-check">
-                    <input type="radio" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                   <label for="RoleCb" class="form-label">Role</label>
+                      <asp:DropDownList runat="server" ID="RoleCb" class="form-control">
+                          <asp:ListItem>---Select Role---</asp:ListItem>
+                          <asp:ListItem>Admin</asp:ListItem>
+                          <asp:ListItem>Doctor</asp:ListItem>
+                          <asp:ListItem>Laboratorian</asp:ListItem>
+                          <asp:ListItem>Receptionist</asp:ListItem>
+                      </asp:DropDownList>
                   </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />
+                        <asp:Button ID="LoginBtn" runat="server" class="btn btn-primary btn-block" Text="Login" OnClick="LoginBtn_Click"></asp:Button>
+              
                     </div>
                   
                 </form>

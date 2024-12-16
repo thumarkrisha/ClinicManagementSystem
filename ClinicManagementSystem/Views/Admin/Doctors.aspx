@@ -50,7 +50,10 @@
                   <label for="DOBTb" class="form-label">Date of Birth</label>
                   <input type="date" class="form-control" id="DOBTb" runat="server"/>
                 </div>
-
+                <div class="mb-3">
+                   <label for="EmailTb" class="form-label">Email</label>
+                   <input type="email" class="form-control" id="EmailTb" runat="server"/>
+                 </div>
                   
               <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />
               <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit" OnClick="EditBtn_Click"  ></asp:Button>
