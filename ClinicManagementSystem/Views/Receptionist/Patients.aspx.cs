@@ -39,7 +39,7 @@ namespace ClinicManagementSystem.Views.Receptionist
 
                 //Response.Write(RName);
                 string Query = "insert into PatientTbl values('{0}','{1}','{2}','{3}','{4}','{5}',{6})";
-                Query = string.Format(Query, PName, PPhone, PGen, PDOB, PAdd, PAllergy,101);
+                Query = string.Format(Query, PName, PPhone, PGen, PDOB, PAdd, PAllergy, Session["uid"]);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Patient Added!!!";

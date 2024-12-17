@@ -34,7 +34,7 @@ namespace ClinicManagementSystem.Views.Laboratorian
                 string TestCost = TestCostTb.Value.ToString();
               
                 string Query = "insert into LabTestTbl values('{0}','{1}',{2})";
-                Query = string.Format(Query, TestName,TestCost,3);
+                Query = string.Format(Query, TestName,TestCost, Session["uid"]);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Test Added!!!";

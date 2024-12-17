@@ -24,6 +24,15 @@ namespace ClinicManagementSystem.Views.Recepionist
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
+        /// logoutbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton logoutbtn;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

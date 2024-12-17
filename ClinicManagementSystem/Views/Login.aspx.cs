@@ -55,7 +55,7 @@ namespace ClinicManagementSystem.Views
                 }
                 else
                 {
-                    string role = "Doctor";
+                    string role = "Doctors";
                     Session["uid"] = dt.Rows[0][0].ToString();
                     Session["role"] = role;
                     Session.Timeout = 10;

@@ -49,7 +49,7 @@ namespace ClinicManagementSystem.Views.Doctors
         {
             try
             {
-                int Doctor = 300;
+                
                 string Patient = PatientCb.SelectedValue.ToString();
                 string Medicines = MedicinesTb.Value.ToString();
                 string Test = LabTestCb.SelectedValue.ToString();
@@ -58,7 +58,7 @@ namespace ClinicManagementSystem.Views.Doctors
 
                 //Response.Write(RName);
                 string Query = "insert into PrescriptionTbl values({0},{1},'{2}',{3},{4})";
-                Query = string.Format(Query, Doctor,Patient,Medicines,Test,Cost);
+                Query = string.Format(Query, Session["uid"], Patient,Medicines,Test,Cost);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Prescription Added!!!";
