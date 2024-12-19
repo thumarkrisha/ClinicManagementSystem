@@ -9,35 +9,60 @@
              <form>
               <div class="mb-3">
                 <label for="LabNameTb" class="form-label">Name</label>
-                <input type="text" class="form-control" id="LabNameTb" runat="server"/>
+               
+                    <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="LabNameTb"
+                        ErrorMessage="Name is required" Display="Dynamic" CssClass="text-danger" SetFocusOnError="True" />
+                   <asp:TextBox ID="LabNameTb" CssClass="form-control" runat="server"></asp:TextBox>
+               
               </div>
 
               <div class="mb-3">
                 <label for="LabEmailTb" class="form-label">Email</label>
-                <input type="text" class="form-control" id="LabEmailTb" runat="server"/>
+                  <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="LabEmailTb"
+                        ErrorMessage="Email is required" Display="Dynamic" CssClass="text-danger" SetFocusOnError="True" />
+                    <asp:RegularExpressionValidator ID="EmailValidator" runat="server" ControlToValidate="LabEmailTb"
+                        ErrorMessage="Invalid email format" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+                        Display="Dynamic" CssClass="text-danger" SetFocusOnError="True" />
+                 <asp:TextBox ID="LabEmailTb" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
 
               <div class="mb-3">
                 <label for="PasswordTb" class="form-label">Password</label>
-                <input type="text" class="form-control" id="PasswordTb" runat="server"/>
+                   <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="PasswordTb"
+                        ErrorMessage="Password is required" Display="Dynamic" CssClass="text-danger" />
+                    <asp:RegularExpressionValidator ID="PasswordValidator" runat="server" ControlToValidate="PasswordTb"
+                        ErrorMessage="Password must be at least 6 characters long"
+                        ValidationExpression="^.{6,}$" Display="Dynamic" CssClass="text-danger" />
+                <asp:TextBox ID="PasswordTb" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
 
               <div class="mb-3">
                  <label for="PhoneTb" class="form-label">Phone</label>
-                 <input type="text" class="form-control" id="PhoneTb" runat="server"/>
+                   <asp:RequiredFieldValidator ID="PhoneRequired" runat="server" ControlToValidate="PhoneTb"
+                        ErrorMessage="Phone number is required" Display="Dynamic" CssClass="text-danger" SetFocusOnError="True"/>
+                    <asp:RegularExpressionValidator ID="PhoneValidator" runat="server" ControlToValidate="PhoneTb"
+                        ErrorMessage="Phone number must be 10 digits" SetFocusOnError="True"
+                        ValidationExpression="^\d{10}$" Display="Dynamic" CssClass="text-danger" />
+                     <asp:TextBox ID="PhoneTb" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
 
              <div class="mb-3">
                   <label for="AddressTb" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="AddressTb" runat="server"/>
+                  <asp:RequiredFieldValidator ID="AddressRequired" runat="server" ControlToValidate="AddressTb"
+                        ErrorMessage="Address is required" Display="Dynamic" CssClass="text-danger" SetFocusOnError="True"/>
+           
+                   <asp:TextBox ID="AddressTb" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
 
             <div class="mb-3">
               <label for="GenderCb" class="form-label">Gender</label>
-             <asp:DropDownList ID="GenderCb" class="form-control" runat="server">
-                 <asp:ListItem Value="Male">Male</asp:ListItem>
-                 <asp:ListItem Value="Female">Female</asp:ListItem>
-             </asp:DropDownList>
+                 <asp:RequiredFieldValidator ID="GenderRequired" runat="server" ControlToValidate="GenderCb"
+                        InitialValue="" ErrorMessage="Gender is required" Display="Dynamic" CssClass="text-danger" SetFocusOnError="True"/>
+                <asp:DropDownList ID="GenderCb" CssClass="form-control" runat="server">
+                        <asp:ListItem Value="" Text="Select Gender"></asp:ListItem>
+                        <asp:ListItem Value="Male">Male</asp:ListItem>
+                        <asp:ListItem Value="Female">Female</asp:ListItem>
+                 </asp:DropDownList>
             </div>
 
                <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />

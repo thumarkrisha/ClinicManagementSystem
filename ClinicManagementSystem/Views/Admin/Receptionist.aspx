@@ -9,27 +9,49 @@
              <form>
               <div class="mb-3">
                 <label for="RecNameb" class="form-label">Name</label>
-                <input type="text" runat="server" class="form-control" id="RecNameTb" required="required"/>
+                  <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="RecNameTb"
+                        ErrorMessage="Name is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                   <asp:TextBox ID="RecNameTb" CssClass="form-control" runat="server"></asp:TextBox>
+
               </div>
 
               <div class="mb-3">
                 <label for="RecEmailTb" class="form-label">Email</label>
-                <input type="text" runat="server" class="form-control" id="RecEmailTb" required="required"/>
+                   <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="RecEmailTb"
+                        ErrorMessage="Email is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                    <asp:RegularExpressionValidator ID="EmailValidator" runat="server" ControlToValidate="RecEmailTb"
+                        ErrorMessage="Invalid email format" CssClass="text-danger" Display="Dynamic"
+                        ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" setFocusOnError="True" />
+                    <asp:TextBox ID="RecEmailTb" CssClass="form-control" runat="server"></asp:TextBox>
+
               </div>
 
               <div class="mb-3">
                 <label for="PasswordTb" class="form-label">Password</label>
-                <input type="text" runat="server" class="form-control" id="PasswordTb" required="required"/>
+                   <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="PasswordTb"
+                        ErrorMessage="Password is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                    <asp:RegularExpressionValidator ID="PasswordValidator" runat="server" ControlToValidate="PasswordTb"
+                        ErrorMessage="Password must be at least 6 characters long" setFocusOnError="True"
+                        ValidationExpression="^.{6,}$" CssClass="text-danger" Display="Dynamic" />
+                    <asp:TextBox ID="PasswordTb" CssClass="form-control" runat="server" ></asp:TextBox>
               </div>
 
               <div class="mb-3">
                  <label for="PhoneTb" class="form-label">Phone</label>
-                 <input type="text" runat="server" class="form-control" id="PhoneTb" required="required"/>
+                  <asp:RequiredFieldValidator ID="PhoneRequired" runat="server" ControlToValidate="PhoneTb"
+                        ErrorMessage="Phone number is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                    <asp:RegularExpressionValidator ID="PhoneValidator" runat="server" ControlToValidate="PhoneTb"
+                        ErrorMessage="Phone number must be 10 digits" setFocusOnError="True"
+                        ValidationExpression="^\d{10}$" CssClass="text-danger" Display="Dynamic" />
+                    <asp:TextBox ID="PhoneTb" CssClass="form-control" runat="server"></asp:TextBox>
+
               </div>
 
               <div class="mb-3">
                   <label for="AddressTb" class="form-label">Address</label>
-                  <input type="text" runat="server" class="form-control" id="AddressTb" required="required"/>
+                  <asp:RequiredFieldValidator ID="AddressRequired" runat="server" ControlToValidate="AddressTb"
+                        ErrorMessage="Address is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                 <asp:TextBox ID="AddressTb" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
 
               <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />

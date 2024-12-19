@@ -19,7 +19,7 @@ namespace ClinicManagementSystem.Views.Admin
         {
 
         }
-
+       
         private void showLaboratorians()
         {
             string query = "select * from LaboratorianTbl";
@@ -30,12 +30,12 @@ namespace ClinicManagementSystem.Views.Admin
         {
             try
             {
-                string LName = LabNameTb.Value.ToString();
-                string LEmail = LabEmailTb.Value.ToString();
-                string LPass = PasswordTb.Value.ToString();
-                string LPhone = PhoneTb.Value.ToString();
-                string LAdd = AddressTb.Value.ToString();
-                string LGen = GenderCb.SelectedItem.Value;
+                string LName = LabNameTb.Text.ToString();
+                string LEmail = LabEmailTb.Text.ToString();
+                string LPass = PasswordTb.Text.ToString();
+                string LPhone = PhoneTb.Text.ToString();
+                string LAdd = AddressTb.Text.ToString();
+                string LGen = GenderCb.SelectedItem.Text;
                
                 //Response.Write(RName);
                 string Query = "insert into LaboratorianTbl values('{0}','{1}','{2}','{3}','{4}','{5}')";
@@ -44,11 +44,11 @@ namespace ClinicManagementSystem.Views.Admin
                 con.SetDatas(Query);
                 ErrMsg.Text = "Laboratoraian Added!!!";
                 showLaboratorians();
-                LabNameTb.Value = "";
-                LabEmailTb.Value = "";
-                AddressTb.Value = "";
-                PhoneTb.Value = "";
-                PasswordTb.Value = "";
+                LabNameTb.Text = "";
+                LabEmailTb.Text = "";
+                AddressTb.Text = "";
+                PhoneTb.Text = "";
+                PasswordTb.Text = "";
                 GenderCb.SelectedIndex = -1;
 
             }
@@ -63,7 +63,7 @@ namespace ClinicManagementSystem.Views.Admin
         {
             try
             {
-                if (LabNameTb.Value == "")
+                if (LabNameTb.Text == "")
                 {
 
                     ErrMsg.Text = "Select a Laboratorian";
@@ -76,11 +76,11 @@ namespace ClinicManagementSystem.Views.Admin
                     showLaboratorians();
                     ErrMsg.Text = "Receptionist Deleted!!!";
                     key = 0;
-                    LabNameTb.Value = "";
-                    LabEmailTb.Value = "";
-                    AddressTb.Value = "";
-                    PhoneTb.Value = "";
-                    PasswordTb.Value = "";
+                    LabNameTb.Text = "";
+                    LabEmailTb.Text = "";
+                    AddressTb.Text = "";
+                    PhoneTb.Text = "";
+                    PasswordTb.Text = "";
                     GenderCb.SelectedIndex = -1;
                 }
 
@@ -93,16 +93,16 @@ namespace ClinicManagementSystem.Views.Admin
         int key = 0;
         protected void LaboratorianGV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LabNameTb.Value = LaboratorianGV.SelectedRow.Cells[2].Text;
-            LabEmailTb.Value = LaboratorianGV.SelectedRow.Cells[3].Text;
-            PasswordTb.Value = LaboratorianGV.SelectedRow.Cells[4].Text;
-            PhoneTb.Value = LaboratorianGV.SelectedRow.Cells[5].Text;
-            AddressTb.Value = LaboratorianGV.SelectedRow.Cells[6].Text;
+            LabNameTb.Text = LaboratorianGV.SelectedRow.Cells[2].Text;
+            LabEmailTb.Text = LaboratorianGV.SelectedRow.Cells[3].Text;
+            PasswordTb.Text = LaboratorianGV.SelectedRow.Cells[4].Text;
+            PhoneTb.Text = LaboratorianGV.SelectedRow.Cells[5].Text;
+            AddressTb.Text = LaboratorianGV.SelectedRow.Cells[6].Text;
             GenderCb.SelectedValue = LaboratorianGV.SelectedRow.Cells[7].Text;
             
           //  Response.Write(GenderCb.SelectedItem.Value +" " + LaboratorianGV.SelectedRow.Cells[7].Text);
 
-            if (LabNameTb.Value == "")
+            if (LabNameTb.Text == "")
             {
                 key = 0;
             }
@@ -116,11 +116,11 @@ namespace ClinicManagementSystem.Views.Admin
         {
             try
             {
-                string LName = LabNameTb.Value.ToString();
-                string LEmail = LabEmailTb.Value.ToString();
-                string LPass = PasswordTb.Value.ToString();
-                string LPhone = PhoneTb.Value.ToString();
-                string LAdd = AddressTb.Value.ToString();
+                string LName = LabNameTb.Text.ToString();
+                string LEmail = LabEmailTb.Text.ToString();
+                string LPass = PasswordTb.Text.ToString();
+                string LPhone = PhoneTb.Text.ToString();
+                string LAdd = AddressTb.Text.ToString();
                 string LGen = GenderCb.SelectedItem.ToString();
                 //Response.Write(RName);
                 string Query = "update LaboratorianTbl set LabName = '{0}',LabEmail = '{1}' ,LabPassword = '{2}',LabPhone = '{3}',LabAddress = '{4}' , LabGen='{5}' where LabId = {6}";
@@ -129,11 +129,11 @@ namespace ClinicManagementSystem.Views.Admin
                 con.SetDatas(Query);
                 ErrMsg.Text = "Laboratorian Updated!!!";
                 showLaboratorians();
-                LabNameTb.Value = "";
-                LabEmailTb.Value = "";
-                AddressTb.Value = "";
-                PhoneTb.Value = "";
-                PasswordTb.Value = "";
+                LabNameTb.Text = "";
+                LabEmailTb.Text = "";
+                AddressTb.Text = "";
+                PhoneTb.Text = "";
+                PasswordTb.Text = "";
                 GenderCb.SelectedIndex = -1;
 
             }

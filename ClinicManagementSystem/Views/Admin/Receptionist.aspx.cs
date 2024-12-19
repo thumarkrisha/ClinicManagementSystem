@@ -31,11 +31,11 @@ namespace ClinicManagementSystem.Views.Admin
         {
             try
             {
-                string RName = RecNameTb.Value.ToString();
-                string REmail = RecEmailTb.Value.ToString();
-                string RAdd = AddressTb.Value.ToString();
-                string RPhone = PhoneTb.Value.ToString();
-                string RPass = PasswordTb.Value.ToString();
+                string RName = RecNameTb.Text.ToString();
+                string REmail = RecEmailTb.Text.ToString();
+                string RAdd = AddressTb.Text.ToString();
+                string RPhone = PhoneTb.Text.ToString();
+                string RPass = PasswordTb.Text.ToString();
                 //Response.Write(RName);
                 string Query = "insert into ReceptionistTbl values('{0}','{1}','{2}','{3}','{4}')";
                 Query = string.Format(Query, RName, REmail, RAdd, RPhone, RPass);
@@ -43,11 +43,11 @@ namespace ClinicManagementSystem.Views.Admin
                 con.SetDatas(Query);
                 ErrMsg.Text = "Receptionist Added!!!";
                 showReceptionist();
-                RecNameTb.Value = "";
-                RecEmailTb.Value = "";
-                AddressTb.Value = "";
-                PhoneTb.Value = "";
-                PasswordTb.Value = "";
+                RecNameTb.Text = "";
+                RecEmailTb.Text = "";
+                AddressTb.Text = "";
+                PhoneTb.Text = "";
+                PasswordTb.Text = "";
 
             }
             catch (Exception ex)
@@ -58,13 +58,13 @@ namespace ClinicManagementSystem.Views.Admin
         int key = 0;
         protected void ReceptionistGV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RecNameTb.Value = ReceptionistGV.SelectedRow.Cells[2].Text;
-            RecEmailTb.Value = ReceptionistGV.SelectedRow.Cells[3].Text;
-            AddressTb.Value = ReceptionistGV.SelectedRow.Cells[4].Text;
-            PhoneTb.Value = ReceptionistGV.SelectedRow.Cells[5].Text;
-            PasswordTb.Value = ReceptionistGV.SelectedRow.Cells[6].Text;
+            RecNameTb.Text = ReceptionistGV.SelectedRow.Cells[2].Text;
+            RecEmailTb.Text = ReceptionistGV.SelectedRow.Cells[3].Text;
+            AddressTb.Text = ReceptionistGV.SelectedRow.Cells[4].Text;
+            PhoneTb.Text = ReceptionistGV.SelectedRow.Cells[5].Text;
+            PasswordTb.Text = ReceptionistGV.SelectedRow.Cells[6].Text;
 
-            if(RecNameTb.Value == "")
+            if(RecNameTb.Text == "")
             {
                 key = 0;
             }
@@ -78,7 +78,7 @@ namespace ClinicManagementSystem.Views.Admin
         {
             try
             {
-                if (RecNameTb.Value == "")
+                if (RecNameTb.Text == "")
                 {
 
                     ErrMsg.Text = "Select a Receptionist";
@@ -91,11 +91,11 @@ namespace ClinicManagementSystem.Views.Admin
                     showReceptionist();
                     ErrMsg.Text = "Receptionist Deleted!!!";
                     key = 0;
-                    RecNameTb.Value = "";
-                    RecEmailTb.Value = "";
-                    AddressTb.Value = "";
-                    PhoneTb.Value = "";
-                    PasswordTb.Value = "";
+                    RecNameTb.Text = "";
+                    RecEmailTb.Text = "";
+                    AddressTb.Text = "";
+                    PhoneTb.Text = "";
+                    PasswordTb.Text = "";
                 }
 
             }
@@ -109,11 +109,11 @@ namespace ClinicManagementSystem.Views.Admin
         {
             try
             {
-                string RName = RecNameTb.Value.ToString();
-                string REmail = RecEmailTb.Value.ToString();
-                string RAdd = AddressTb.Value.ToString();
-                string RPhone = PhoneTb.Value.ToString();
-                string RPass = PasswordTb.Value.ToString();
+                string RName = RecNameTb.Text.ToString();
+                string REmail = RecEmailTb.Text.ToString();
+                string RAdd = AddressTb.Text.ToString();
+                string RPhone = PhoneTb.Text.ToString();
+                string RPass = PasswordTb.Text.ToString();
                 //Response.Write(RName);
                 string Query = "update ReceptionistTbl set RecName = '{0}',RecEmail = '{1}' ,RecAdd = '{2}',RecPhone = '{3}',RecPassword = '{4}' where RecId = {5}";
                 Query = string.Format(Query, RName, REmail, RAdd, RPhone, RPass, ReceptionistGV.SelectedRow.Cells[1].Text);
@@ -121,11 +121,11 @@ namespace ClinicManagementSystem.Views.Admin
                 con.SetDatas(Query);
                 ErrMsg.Text = "Receptionist Updated!!!";
                 showReceptionist();
-                RecNameTb.Value = "";
-                RecEmailTb.Value = "";
-                AddressTb.Value = "";
-                PhoneTb.Value = "";
-                PasswordTb.Value = "";
+                RecNameTb.Text = "";
+                RecEmailTb.Text = "";
+                AddressTb.Text = "";
+                PhoneTb.Text = "";
+                PasswordTb.Text = "";
 
             }
             catch (Exception ex)

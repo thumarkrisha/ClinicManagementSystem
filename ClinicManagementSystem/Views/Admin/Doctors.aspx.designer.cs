@@ -15,13 +15,40 @@ namespace ClinicManagementSystem.Views.Admin
     {
 
         /// <summary>
+        /// ReqName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqName;
+
+        /// <summary>
         /// DocNameTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText DocNameTb;
+        protected global::System.Web.UI.WebControls.TextBox DocNameTb;
+
+        /// <summary>
+        /// ReqPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqPhone;
+
+        /// <summary>
+        /// RegPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegPhone;
 
         /// <summary>
         /// DocPhoneTb control.
@@ -30,7 +57,25 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText DocPhoneTb;
+        protected global::System.Web.UI.WebControls.TextBox DocPhoneTb;
+
+        /// <summary>
+        /// ReqExp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqExp;
+
+        /// <summary>
+        /// RangeExp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeExp;
 
         /// <summary>
         /// DocExpTb control.
@@ -39,7 +84,16 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText DocExpTb;
+        protected global::System.Web.UI.WebControls.TextBox DocExpTb;
+
+        /// <summary>
+        /// ReqSpecialisation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqSpecialisation;
 
         /// <summary>
         /// SpecialisationTb control.
@@ -48,7 +102,25 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText SpecialisationTb;
+        protected global::System.Web.UI.WebControls.TextBox SpecialisationTb;
+
+        /// <summary>
+        /// ReqPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqPassword;
+
+        /// <summary>
+        /// RegPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegPassword;
 
         /// <summary>
         /// PasswordTb control.
@@ -57,7 +129,16 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PasswordTb;
+        protected global::System.Web.UI.WebControls.TextBox PasswordTb;
+
+        /// <summary>
+        /// ReqGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqGender;
 
         /// <summary>
         /// GenderCb control.
@@ -69,13 +150,31 @@ namespace ClinicManagementSystem.Views.Admin
         protected global::System.Web.UI.WebControls.DropDownList GenderCb;
 
         /// <summary>
+        /// ReqAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqAddress;
+
+        /// <summary>
         /// AddressTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText AddressTb;
+        protected global::System.Web.UI.WebControls.TextBox AddressTb;
+
+        /// <summary>
+        /// ReqDOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqDOB;
 
         /// <summary>
         /// DOBTb control.
@@ -84,7 +183,25 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DOBTb;
+        protected global::System.Web.UI.WebControls.TextBox DOBTb;
+
+        /// <summary>
+        /// ReqEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqEmail;
+
+        /// <summary>
+        /// RegEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegEmail;
 
         /// <summary>
         /// EmailTb control.
@@ -93,7 +210,7 @@ namespace ClinicManagementSystem.Views.Admin
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl EmailTb;
+        protected global::System.Web.UI.WebControls.TextBox EmailTb;
 
         /// <summary>
         /// ErrMsg control.
