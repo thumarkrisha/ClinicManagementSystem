@@ -13,9 +13,12 @@ namespace ClinicManagementSystem.Views.Doctors
         protected void Page_Load(object sender, EventArgs e)
         {
             con = new Models.Functions();
-            showPrescription();
-            GetTest();
-            GetPatient();
+            if (!IsPostBack) // Only load data on the first page load
+            {
+                showPrescription();
+                GetTest();
+                GetPatient();
+            }
         }
         private void showPrescription()
         {
@@ -35,6 +38,7 @@ namespace ClinicManagementSystem.Views.Doctors
             LabTestCb.DataValueField = con.GetDatas(query).Columns["TestId"].ToString();
             LabTestCb.DataSource = con.GetDatas(query);
             LabTestCb.DataBind();
+            LabTestCb.Items.Insert(0, new ListItem("Select Test", "0"));
         }
 
         private void GetPatient()
@@ -44,27 +48,34 @@ namespace ClinicManagementSystem.Views.Doctors
             PatientCb.DataValueField = con.GetDatas(query).Columns["PatId"].ToString();
             PatientCb.DataSource = con.GetDatas(query);
             PatientCb.DataBind();
+            PatientCb.Items.Insert(0, new ListItem("Select Patient", "0"));
         }
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                
-                string Patient = PatientCb.SelectedValue.ToString();
-                string Medicines = MedicinesTb.Value.ToString();
-                string Test = LabTestCb.SelectedValue.ToString();
-                string Cost = CostTb.Value.ToString();
+                if (PatientCb.SelectedIndex == 0 || LabTestCb.SelectedIndex == 0)
+                {
+                    ErrMsg.Text = "Please select both a patient and a test.";
+                    return;
+                }
+
+
+                string Patient = PatientCb.SelectedValue;
+                string Medicines = MedicinesTb.Text.ToString();
+                string Test = LabTestCb.SelectedValue;
+                string Cost = CostTb.Text.Trim();
                
 
-                //Response.Write(RName);
-                string Query = "insert into PrescriptionTbl values({0},{1},'{2}',{3},{4})";
-                Query = string.Format(Query, Session["uid"], Patient,Medicines,Test,Cost);
+                //Response.Write(Patient/);
+                string Query = "insert into PrescriptionTbl values({0},'{1}','{2}','{3}',{4})";
+                Query = string.Format(Query, Session["uid"].ToString(), Patient,Medicines,Test,Cost);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Prescription Added!!!";
                 showPrescription();
-                MedicinesTb.Value = "";
-                CostTb.Value = "";
+                MedicinesTb.Text = "";
+                CostTb.Text = "";
                 LabTestCb.SelectedIndex = -1;
                 PatientCb.SelectedIndex = -1;
 

@@ -9,26 +9,36 @@
              <form>
               <div class="mb-3">
                 <label for="PatientCb" class="form-label">Patient</label>
-                <asp:DropDownList ID="PatientCb" class="form-control" runat="server">
-                     
-                 </asp:DropDownList>
+                   <asp:RequiredFieldValidator ID="PatientValidator" runat="server" ControlToValidate="PatientCb"
+                        ErrorMessage="Patient selection is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                    <asp:DropDownList ID="PatientCb" CssClass="form-control" runat="server">
+                    </asp:DropDownList>
               </div>
 
               <div class="mb-3">
                 <label for="MedicinesTb" class="form-label">Medicines</label>
-                <input type="text" class="form-control" id="MedicinesTb" runat="server"/>
+                  <asp:RequiredFieldValidator ID="MedicinesValidator" runat="server" ControlToValidate="MedicinesTb"
+                        ErrorMessage="Medicines are required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                
+                    <asp:TextBox ID="MedicinesTb" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
 
               <div class="mb-3">
                 <label for="LabTestCb" class="form-label">LabTest</label>
-                <asp:DropDownList ID="LabTestCb" class="form-control" runat="server">
-     
-                 </asp:DropDownList>
+                  <asp:RequiredFieldValidator ID="LabTestValidator" runat="server" ControlToValidate="LabTestCb"
+                        ErrorMessage="Lab test selection is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                <asp:DropDownList ID="LabTestCb" CssClass="form-control" runat="server">
+                    </asp:DropDownList>
               </div>
 
              <div class="mb-3">
                   <label for="CostTb" class="form-label">Cost</label>
-                  <input type="text" class="form-control" id="CostTb" runat="server"/>
+                  <asp:RequiredFieldValidator ID="CostValidator" runat="server" ControlToValidate="CostTb"
+                        ErrorMessage="Cost is required" CssClass="text-danger" Display="Dynamic" setFocusOnError="True" />
+                    <asp:RegularExpressionValidator ID="CostFormatValidator" runat="server" ControlToValidate="CostTb"
+                        ErrorMessage="Cost must be a numeric value" CssClass="text-danger" Display="Dynamic"
+                        ValidationExpression="^\d+(\.\d{1,2})?$" />
+                    <asp:TextBox ID="CostTb" CssClass="form-control" runat="server"></asp:TextBox>
              </div>
                
             <div class="d-grid">

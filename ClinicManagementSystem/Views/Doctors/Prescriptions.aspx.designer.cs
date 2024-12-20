@@ -15,6 +15,15 @@ namespace ClinicManagementSystem.Views.Doctors
     {
 
         /// <summary>
+        /// PatientValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PatientValidator;
+
+        /// <summary>
         /// PatientCb control.
         /// </summary>
         /// <remarks>
@@ -24,13 +33,31 @@ namespace ClinicManagementSystem.Views.Doctors
         protected global::System.Web.UI.WebControls.DropDownList PatientCb;
 
         /// <summary>
+        /// MedicinesValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator MedicinesValidator;
+
+        /// <summary>
         /// MedicinesTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText MedicinesTb;
+        protected global::System.Web.UI.WebControls.TextBox MedicinesTb;
+
+        /// <summary>
+        /// LabTestValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LabTestValidator;
 
         /// <summary>
         /// LabTestCb control.
@@ -42,13 +69,31 @@ namespace ClinicManagementSystem.Views.Doctors
         protected global::System.Web.UI.WebControls.DropDownList LabTestCb;
 
         /// <summary>
+        /// CostValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CostValidator;
+
+        /// <summary>
+        /// CostFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator CostFormatValidator;
+
+        /// <summary>
         /// CostTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText CostTb;
+        protected global::System.Web.UI.WebControls.TextBox CostTb;
 
         /// <summary>
         /// ErrMsg control.
