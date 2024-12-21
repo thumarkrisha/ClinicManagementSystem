@@ -16,8 +16,9 @@ namespace ClinicManagementSystem.Views.Laboratorian
 
         protected void logoutbtn_Click(object sender, EventArgs e)
         {
+            Trace.Write("Logout button clicked."); // Debug log
             Session.Clear();
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/Views/Login.aspx");
         }
     }
 }

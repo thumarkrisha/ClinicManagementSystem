@@ -15,13 +15,40 @@ namespace ClinicManagementSystem.Views.Receptionist
     {
 
         /// <summary>
+        /// NameRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NameRequired;
+
+        /// <summary>
         /// PatNameTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PatNameTb;
+        protected global::System.Web.UI.WebControls.TextBox PatNameTb;
+
+        /// <summary>
+        /// PhoneRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneRequired;
+
+        /// <summary>
+        /// PhoneRegex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PhoneRegex;
 
         /// <summary>
         /// PatPhoneTb control.
@@ -30,7 +57,16 @@ namespace ClinicManagementSystem.Views.Receptionist
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PatPhoneTb;
+        protected global::System.Web.UI.WebControls.TextBox PatPhoneTb;
+
+        /// <summary>
+        /// GenderRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator GenderRequired;
 
         /// <summary>
         /// GenderCb control.
@@ -42,13 +78,31 @@ namespace ClinicManagementSystem.Views.Receptionist
         protected global::System.Web.UI.WebControls.DropDownList GenderCb;
 
         /// <summary>
+        /// DOBRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DOBRequired;
+
+        /// <summary>
         /// DOBTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DOBTb;
+        protected global::System.Web.UI.WebControls.TextBox DOBTb;
+
+        /// <summary>
+        /// AddressRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AddressRequired;
 
         /// <summary>
         /// AddressTb control.
@@ -57,7 +111,7 @@ namespace ClinicManagementSystem.Views.Receptionist
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText AddressTb;
+        protected global::System.Web.UI.WebControls.TextBox AddressTb;
 
         /// <summary>
         /// AllergyTb control.

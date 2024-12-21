@@ -15,13 +15,40 @@ namespace ClinicManagementSystem.Views.Laboratorian
     {
 
         /// <summary>
+        /// NameRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NameRequiredValidator;
+
+        /// <summary>
         /// TestNameTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText TestNameTb;
+        protected global::System.Web.UI.WebControls.TextBox TestNameTb;
+
+        /// <summary>
+        /// CostRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CostRequiredValidator;
+
+        /// <summary>
+        /// CostRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator CostRegexValidator;
 
         /// <summary>
         /// TestCostTb control.
@@ -30,7 +57,7 @@ namespace ClinicManagementSystem.Views.Laboratorian
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText TestCostTb;
+        protected global::System.Web.UI.WebControls.TextBox TestCostTb;
 
         /// <summary>
         /// ErrMsg control.

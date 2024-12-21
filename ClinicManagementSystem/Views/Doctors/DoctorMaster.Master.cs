@@ -17,7 +17,7 @@ namespace ClinicManagementSystem.Views.Doctors
         protected void logoutbtn_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/Views/Login.aspx");
         }
     }
 }

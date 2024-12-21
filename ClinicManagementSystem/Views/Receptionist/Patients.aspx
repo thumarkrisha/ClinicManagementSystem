@@ -9,29 +9,36 @@
              <form>
               <div class="mb-3">
                 <label for="PatNameTb" class="form-label">Name</label>
-                <input type="text" class="form-control" id="PatNameTb" runat="server"/>
+                        <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="PatNameTb" ErrorMessage="Name is required." CssClass="text-danger" Display="Dynamic" SetFocusOnError="true"> </asp:RequiredFieldValidator>
+                <asp:TextBox ID="PatNameTb" runat="server" CssClass="form-control"></asp:TextBox>
               </div>
 
               <div class="mb-3">
                 <label for="PatPhoneTb" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="PatPhoneTb" runat="server"/>
+                    <asp:RequiredFieldValidator ID="PhoneRequired" runat="server" ControlToValidate="PatPhoneTb" ErrorMessage="Phone number is required." CssClass="text-danger" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="PhoneRegex" runat="server" ControlToValidate="PatPhoneTb" ErrorMessage="Invalid phone number. Must be 10 digits." Display="Dynamic" SetFocusOnError="true" CssClass="text-danger" ValidationExpression="^\d{10}$"></asp:RegularExpressionValidator>
+                    <asp:TextBox ID="PatPhoneTb" runat="server" CssClass="form-control"></asp:TextBox>          
               </div>
 
                <div class="mb-3">
                   <label for="GenderCb" class="form-label">Gender</label>
-                 <asp:DropDownList ID="GenderCb" class="form-control" runat="server">
-                     <asp:ListItem Value="Male">Male</asp:ListItem>
-                     <asp:ListItem Value="Female">Female</asp:ListItem>
-                 </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="GenderRequired" runat="server" ControlToValidate="GenderCb" Display="Dynamic" SetFocusOnError="true" InitialValue="" ErrorMessage="Gender is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                    <asp:DropDownList ID="GenderCb" CssClass="form-control" runat="server">
+                            <asp:ListItem Value="" Text="Select Gender"></asp:ListItem>
+                            <asp:ListItem Value="Male">Male</asp:ListItem>
+                            <asp:ListItem Value="Female">Female</asp:ListItem>
+                    </asp:DropDownList>
 
               <div class="mb-3">
-                <label for="PasswordTb" class="form-label">DOB</label>
-                <input type="date" class="form-control" id="DOBTb" runat="server"/>
+               <label for="DOBTb" class="form-label">DOB</label>
+               <asp:RequiredFieldValidator ID="DOBRequired" runat="server" ControlToValidate="DOBTb" Display="Dynamic" SetFocusOnError="true" ErrorMessage="Date of Birth is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+              <asp:TextBox ID="DOBTb" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
               </div>
 
               <div class="mb-3">
                  <label for="AddressTb" class="form-label">Address</label>
-                 <input type="text" class="form-control" id="AddressTb" runat="server"/>
+                  <asp:RequiredFieldValidator ID="AddressRequired" runat="server" ControlToValidate="AddressTb" Display="Dynamic" SetFocusOnError="true" ErrorMessage="Address is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                 <asp:TextBox ID="AddressTb" runat="server" CssClass="form-control"></asp:TextBox>
               </div>
 
              <div class="mb-3">
@@ -54,7 +61,7 @@
              <div class="row">
                   <div class="col">
                      <h1>Patient List</h1>
-                      <asp:GridView ID="PatientList" class="table table-hover" runat="server" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="PatientList_SelectedIndexChanged">
+                      <asp:GridView ID="PatientList" class="table table-hover" runat="server" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="PatientList_SelectedIndexChanged" OnRowDataBound="PatientList_RowDataBound">
                           <AlternatingRowStyle BackColor="White" />
                           <EditRowStyle BackColor="#2461BF" />
                           <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

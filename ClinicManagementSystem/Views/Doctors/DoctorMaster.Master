@@ -29,7 +29,7 @@
          <a class="nav-link" href="">Receptionist</a>
       </li>
       <li class="nav-item">
-         <asp:LinkButton class="nav-link" ID="logoutbtn" runat="server" OnClick="logoutbtn_Click" >Logout</asp:LinkButton>
+         <asp:LinkButton class="nav-link" ID="logoutbtn" runat="server" OnClick="logoutbtn_Click" CausesValidation="false">Logout</asp:LinkButton>
       </li>
       
     </ul>

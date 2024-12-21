@@ -30,8 +30,8 @@ namespace ClinicManagementSystem.Views.Laboratorian
         {
             try
             {
-                string TestName = TestNameTb.Value.ToString();
-                string TestCost = TestCostTb.Value.ToString();
+                string TestName = TestNameTb.Text.ToString();
+                string TestCost = TestCostTb.Text.ToString();
               
                 string Query = "insert into LabTestTbl values('{0}','{1}',{2})";
                 Query = string.Format(Query, TestName,TestCost, Session["uid"]);
@@ -39,8 +39,8 @@ namespace ClinicManagementSystem.Views.Laboratorian
                 con.SetDatas(Query);
                 ErrMsg.Text = "Test Added!!!";
                 showTests();
-                TestNameTb.Value = "";
-                TestCostTb.Value = "";
+                TestNameTb.Text = "";
+                TestCostTb.Text = "";
 
             }
             catch (Exception ex)
@@ -51,12 +51,12 @@ namespace ClinicManagementSystem.Views.Laboratorian
         int key = 0;
         protected void LabTestGV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TestNameTb.Value = LabTestGV.SelectedRow.Cells[2].Text;
-            TestCostTb.Value = LabTestGV.SelectedRow.Cells[3].Text;
+            TestNameTb.Text = LabTestGV.SelectedRow.Cells[2].Text;
+            TestCostTb.Text = LabTestGV.SelectedRow.Cells[3].Text;
            
             //Response.Write(GenderCb.SelectedItem.Value + " " + LaboratorianGV.SelectedRow.Cells[7].Text);
 
-            if (TestNameTb.Value == "")
+            if (TestNameTb.Text == "")
             {
                 key = 0;
             }
@@ -70,8 +70,8 @@ namespace ClinicManagementSystem.Views.Laboratorian
         {
             try
             {
-                string TestName = TestNameTb.Value.ToString();
-                string TestCost = TestCostTb.Value.ToString();
+                string TestName = TestNameTb.Text.ToString();
+                string TestCost = TestCostTb.Text.ToString();
                 //Response.Write(RName);
                 string Query = "update LabTestTbl set TestName = '{0}',TestCost = {1} where TestId = {2}";
                 Query = string.Format(Query,TestName,TestCost, LabTestGV.SelectedRow.Cells[1].Text);
@@ -79,8 +79,8 @@ namespace ClinicManagementSystem.Views.Laboratorian
                 con.SetDatas(Query);
                 ErrMsg.Text = "Test Updated!!!";
                 showTests();
-                TestNameTb.Value = "";
-                TestCostTb.Value = "";
+                TestNameTb.Text = "";
+                TestCostTb.Text = "";
               
 
             }
@@ -94,7 +94,7 @@ namespace ClinicManagementSystem.Views.Laboratorian
         {
             try
             {
-                if (TestNameTb.Value == "")
+                if (TestNameTb.Text == "")
                 {
 
                     ErrMsg.Text = "Select a Test";
@@ -107,8 +107,8 @@ namespace ClinicManagementSystem.Views.Laboratorian
                     showTests();
                     ErrMsg.Text = "Lab Test Deleted!!!";
                     key = 0;
-                    TestNameTb.Value = "";
-                    TestCostTb.Value = "";
+                    TestNameTb.Text = "";
+                    TestCostTb.Text = "";
                    
                 }
 

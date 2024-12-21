@@ -16,8 +16,12 @@ namespace ClinicManagementSystem.Views.Recepionist
 
         protected void logoutbtn_Click(object sender, EventArgs e)
         {
-            Session.Clear();
-            Response.Redirect("~/Login.aspx");
+            
+                Session.Clear(); // Clears the session
+                Session.Abandon(); // Marks session for deletion
+                Response.Redirect("~/Views/Login.aspx"); // Redirects to the login page
+            
+
         }
     }
 }

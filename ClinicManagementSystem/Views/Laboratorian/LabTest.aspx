@@ -10,12 +10,19 @@
              <form>
               <div class="mb-3">
                 <label for="LabNameTb" class="form-label">Name</label>
-                <input type="text" class="form-control" id="TestNameTb" runat="server"/>
+                <asp:RequiredFieldValidator ID="NameRequiredValidator" runat="server" ControlToValidate="TestNameTb" ErrorMessage="Name is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="TestNameTb" runat="server" CssClass="form-control"></asp:TextBox>
+
               </div>
 
               <div class="mb-3">
                 <label for="TestCostTb" class="form-label">Test Cost</label>
-                <input type="text" class="form-control" id="TestCostTb" runat="server"/>
+                  <asp:RequiredFieldValidator ID="CostRequiredValidator" runat="server" ControlToValidate="TestCostTb" ErrorMessage="Cost is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="CostRegexValidator" runat="server" ControlToValidate="TestCostTb" 
+                            ErrorMessage="Cost must be a valid number." CssClass="text-danger" 
+                            ValidationExpression="^\d+(\.\d{1,2})?$"></asp:RegularExpressionValidator>
+                        <asp:TextBox ID="TestCostTb" runat="server" CssClass="form-control"></asp:TextBox>
+
               </div>
 
             <div class="row" style="height:50px"></div>
