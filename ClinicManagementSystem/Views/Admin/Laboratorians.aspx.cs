@@ -14,6 +14,11 @@ namespace ClinicManagementSystem.Views.Admin
         {
             con = new Models.Functions();
             showLaboratorians();
+            if (Session["uid"] == null)
+            {
+                Response.Redirect("~/Views/Guest/Home.aspx");
+            }
+           
         }
         public override void VerifyRenderingInServerForm(Control control)
         {

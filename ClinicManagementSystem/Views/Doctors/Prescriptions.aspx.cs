@@ -19,6 +19,10 @@ namespace ClinicManagementSystem.Views.Doctors
                 GetTest();
                 GetPatient();
             }
+            if (Session["uid"] == null)
+            {
+                Response.Redirect("~/Views/Guest/Home.aspx");
+            }
         }
         private void showPrescription()
         {

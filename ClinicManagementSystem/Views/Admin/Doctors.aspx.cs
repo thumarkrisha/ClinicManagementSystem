@@ -14,6 +14,10 @@ namespace ClinicManagementSystem.Views.Admin
         {
             con = new Models.Functions();
             showDoctors();
+            if (Session["uid"]==null)
+            {
+                Response.Redirect("~/Views/Guest/Home.aspx");
+            }
         }
         private void showDoctors()
         {

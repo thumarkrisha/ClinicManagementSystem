@@ -15,6 +15,10 @@ namespace ClinicManagementSystem.Views.Receptionist
         {
             con = new Models.Functions();
             showPatient();
+            if (Session["uid"] == null)
+            {
+                Response.Redirect("~/Views/Guest/Home.aspx");
+            }
         }
         private void showPatient()
         {
