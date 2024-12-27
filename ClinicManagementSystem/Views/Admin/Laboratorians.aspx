@@ -9,7 +9,6 @@
              <form>
               <div class="mb-3">
                 <label for="LabNameTb" class="form-label">Name</label>
-               
                     <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="LabNameTb"
                         ErrorMessage="Name is required" Display="Dynamic" CssClass="text-danger" SetFocusOnError="True" />
                    <asp:TextBox ID="LabNameTb" CssClass="form-control" runat="server"></asp:TextBox>

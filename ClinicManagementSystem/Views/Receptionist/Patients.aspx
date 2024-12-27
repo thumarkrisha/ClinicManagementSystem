@@ -9,7 +9,7 @@
              <form>
               <div class="mb-3">
                 <label for="PatNameTb" class="form-label">Name</label>
-                        <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="PatNameTb" ErrorMessage="Name is required." CssClass="text-danger" Display="Dynamic" SetFocusOnError="true"> </asp:RequiredFieldValidator>
+               <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="PatNameTb" ErrorMessage="Name is required." CssClass="text-danger" Display="Dynamic" SetFocusOnError="true"> </asp:RequiredFieldValidator>
                 <asp:TextBox ID="PatNameTb" runat="server" CssClass="form-control"></asp:TextBox>
               </div>
 

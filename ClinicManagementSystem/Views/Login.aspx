@@ -18,12 +18,15 @@
                 <h1 class="T text-center p-1">MedicoCare Clinic</h1>
                 <form  id="form1" runat="server">
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="Email" required="required" runat="server">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>    
+                      <asp:RequiredFieldValidator ID="EmailRequired" ControlToValidate="Email" runat="server" ErrorMessage="Email is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="EmailFormatValidator" ControlToValidate="Email" runat="server" ErrorMessage="Invalid email format." ValidationExpression="^[^\s@]+@[^\s@]+\.[^\s@]+$" CssClass="text-danger"></asp:RegularExpressionValidator>
+                     <asp:TextBox ID="Email" CssClass="form-control" runat="server"></asp:TextBox>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="Password" required="required" runat="server" >
+                    <asp:RequiredFieldValidator ID="PasswordRequired" ControlToValidate="Password" runat="server" ErrorMessage="Password is required." CssClass="text-danger"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="Password" CssClass="form-control" TextMode="Password" runat="server"></asp:TextBox>
                   </div>
                   <div class="mb-3 form-check">
                    <label for="RoleCb" class="form-label">Role</label>

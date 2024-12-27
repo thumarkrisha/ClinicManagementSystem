@@ -10,15 +10,12 @@
                   <div class="mb-3">
                     <label for="DocNameb" class="form-label">Doctor Name</label>
                     <asp:RequiredFieldValidator ID="ReqName" ControlToValidate="DocNameTb" SetFocusOnError="True" ErrorMessage="Name is required" CssClass="text-danger" runat="server" Display="Dynamic" />
-
                     <asp:TextBox ID="DocNameTb" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <%--<input type="text" class="form-control" id="DocNameTb" runat="server"/>--%>
                   </div>
 
                   <div class="mb-3">
                     <label for="DocPhoneTb" class="form-label">Phone Number</label>
-                     
                       <asp:RequiredFieldValidator ID="ReqPhone" ControlToValidate="DocPhoneTb" SetFocusOnError="True" ErrorMessage="Phone number is required" CssClass="text-danger" runat="server" Display="Dynamic" />
                       <asp:RegularExpressionValidator ID="RegPhone" ControlToValidate="DocPhoneTb" SetFocusOnError="True" ValidationExpression="^\d{10}$" Display="Dynamic" ErrorMessage="Invalid phone number" CssClass="text-danger" runat="server" />       
                     <asp:TextBox ID="DocPhoneTb" runat="server" CssClass="form-control"></asp:TextBox>
@@ -34,7 +31,6 @@
 
                   <div class="mb-3">
                      <label for="SpecialisationTb" class="form-label">Specialisation</label>
-                    
                         <asp:RequiredFieldValidator ID="ReqSpecialisation" ControlToValidate="SpecialisationTb" SetFocusOnError="True" ErrorMessage="Specialisation is required" CssClass="text-danger" runat="server" Display="Dynamic"/>
                  <asp:TextBox ID="SpecialisationTb" runat="server" CssClass="form-control"></asp:TextBox>
                   </div>
@@ -50,7 +46,6 @@
                 <div class="mb-3">
                   <label for="GenderCb" class="form-label">Gender</label>
                      <asp:RequiredFieldValidator ID="ReqGender" ControlToValidate="GenderCb" SetFocusOnError="True" Display="Dynamic" InitialValue="" ErrorMessage="Please select a gender" CssClass="text-danger" runat="server" />
-      
                     <asp:DropDownList ID="GenderCb" CssClass="form-control" runat="server">
                             <asp:ListItem Text="Select Gender" Value="" />
                             <asp:ListItem Value="Male">Male</asp:ListItem>
@@ -74,7 +69,6 @@
                 </div>
                 <div class="mb-3">
                    <label for="EmailTb" class="form-label">Email</label>
-                  
                         <asp:RequiredFieldValidator ID="ReqEmail" ControlToValidate="EmailTb" SetFocusOnError="True" Display="Dynamic" ErrorMessage="Email is required" CssClass="text-danger" runat="server" />
                         <asp:RegularExpressionValidator ID="RegEmail" ControlToValidate="EmailTb" SetFocusOnError="True" Display="Dynamic" ValidationExpression="^[^\s@]+@[^\s@]+\.[^\s@]+$" ErrorMessage="Invalid email address" CssClass="text-danger" runat="server" />
                 <asp:TextBox ID="EmailTb" TextMode="Email" runat="server" CssClass="form-control"></asp:TextBox>

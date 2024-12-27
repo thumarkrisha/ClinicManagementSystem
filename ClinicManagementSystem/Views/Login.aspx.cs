@@ -47,7 +47,7 @@ namespace ClinicManagementSystem.Views
             else if (RoleCb.SelectedIndex == 2)
             {
                 string query = "select * from DoctorTbl where DocEmail = '{0}' and DocPassword = '{1}'";
-                query = string.Format(query,Email.Value.ToString(),Password.Value.ToString());
+                query = string.Format(query,Email.Text.ToString(),Password.Text.ToString());
                 DataTable dt = con.GetDatas(query);
                 if (dt.Rows.Count == 0)
                 {
@@ -68,7 +68,7 @@ namespace ClinicManagementSystem.Views
             else if (RoleCb.SelectedIndex == 3)
             {
                 string query = "select * from LaboratorianTbl where LabEmail = '{0}' and LabPassword = '{1}'";
-                query = string.Format(query, Email.Value.ToString(), Password.Value.ToString());
+                query = string.Format(query, Email.Text.ToString(), Password.Text.ToString());
                 DataTable dt = con.GetDatas(query);
                 if (dt.Rows.Count == 0)
                 {
@@ -89,7 +89,7 @@ namespace ClinicManagementSystem.Views
             else if (RoleCb.SelectedIndex == 4)
             {
                 string query = "select * from ReceptionistTbl where RecEmail = '{0}' and RecPassword = '{1}'";
-                query = string.Format(query, Email.Value.ToString(), Password.Value.ToString());
+                query = string.Format(query, Email.Text.ToString(), Password.Text.ToString());
                 DataTable dt = con.GetDatas(query);
                 if (dt.Rows.Count == 0)
                 {
