@@ -40,11 +40,14 @@ namespace ClinicManagementSystem.Views.Receptionist
                 DateTime DDOB = DateTime.Parse(DOBTb.Text).Date;
                 string formattedDate = DDOB.ToString("dd-MM-yyyy");
                 string PAdd = AddressTb.Text.ToString();
-                string PAllergy = AllergyTb.Value.ToString();
+                string PAllergy = AllergyTb.Text.ToString();
+                string PEmail = EmailTb.Text.ToString();
+                string PPassword = PasswordTb.Text.ToString();
+
 
                 //Response.Write(RName);
-                string Query = "insert into PatientTbl values('{0}','{1}','{2}','{3}','{4}','{5}',{6})";
-                Query = string.Format(Query, PName, PPhone, PGen, formattedDate, PAdd, PAllergy, Session["uid"]);
+                string Query = "insert into PatientTbl values('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')";
+                Query = string.Format(Query, PName, PPhone, PGen, formattedDate, PAdd, PAllergy, Session["uid"],PEmail,PPassword);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Patient Added!!!";
@@ -53,7 +56,9 @@ namespace ClinicManagementSystem.Views.Receptionist
                 PatPhoneTb.Text = "";
                 AddressTb.Text = "";
                 DOBTb.Text = "";
-                AllergyTb.Value = "";
+                AllergyTb.Text = "";
+                PasswordTb.Text = "";
+                EmailTb.Text = ""; 
                 GenderCb.SelectedIndex = -1;
 
             }
@@ -78,7 +83,9 @@ namespace ClinicManagementSystem.Views.Receptionist
                 DOBTb.Text = ""; // Clear if date is invalid
             }
             AddressTb.Text = PatientList.SelectedRow.Cells[6].Text;
-            AllergyTb.Value = PatientList.SelectedRow.Cells[7].Text;
+            AllergyTb.Text = PatientList.SelectedRow.Cells[7].Text;
+            EmailTb.Text = PatientList.SelectedRow.Cells[8].Text;
+            PasswordTb.Text = PatientList.SelectedRow.Cells[9].Text;
 
             //Response.Write(GenderCb.SelectedItem.Value + " " + LaboratorianGV.SelectedRow.Cells[7].Text);
 
@@ -113,7 +120,9 @@ namespace ClinicManagementSystem.Views.Receptionist
                     PatPhoneTb.Text = "";
                     AddressTb.Text = "";
                     DOBTb.Text = "";
-                    AllergyTb.Value = "";
+                    AllergyTb.Text = "";
+                    EmailTb.Text = "";
+                    PasswordTb.Text = "";
                     GenderCb.SelectedIndex = -1;
                 }
 
@@ -133,10 +142,12 @@ namespace ClinicManagementSystem.Views.Receptionist
                 string PGen = GenderCb.SelectedItem.Text;
                 string PDOB = DOBTb.Text.ToString();
                 string PAdd = AddressTb.Text.ToString();
-                string PAllergy = AllergyTb.Value.ToString();
+                string PAllergy = AllergyTb.Text.ToString();
+                string PEmail = EmailTb.Text.ToString();
+                string PPassword = PasswordTb.Text.ToString();
                 //Response.Write(RName);
-                string Query = "update PatientTbl set PatName = '{0}',PatPhone = '{1}' ,PatGen = '{2}',PatDOB = '{3}',PatAdd = '{4}' , PatAllergies ='{5}' where PatId = {6}";
-                Query = string.Format(Query,PName,PPhone,PGen,PDOB,PAdd,PAllergy, PatientList.SelectedRow.Cells[1].Text);
+                string Query = "update PatientTbl set PatName = '{0}',PatPhone = '{1}' ,PatGen = '{2}',PatDOB = '{3}',PatAdd = '{4}' , PatAllergies ='{5}' ,Email='{6}' , Password='{7}' where PatId = {8}";
+                Query = string.Format(Query,PName,PPhone,PGen,PDOB,PAdd,PAllergy,PEmail,PPassword, PatientList.SelectedRow.Cells[1].Text);
 
                 con.SetDatas(Query);
                 ErrMsg.Text = "Patient Updated!!!";
@@ -145,7 +156,9 @@ namespace ClinicManagementSystem.Views.Receptionist
                 PatPhoneTb.Text = "";
                 AddressTb.Text = "";
                 DOBTb.Text = "";
-                AllergyTb.Value = "";
+                AllergyTb.Text = "";
+                EmailTb.Text = "";
+                PasswordTb.Text = "";
                 GenderCb.SelectedIndex = -1;
 
             }

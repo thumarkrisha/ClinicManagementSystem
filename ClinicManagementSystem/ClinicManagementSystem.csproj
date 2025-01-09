@@ -102,9 +102,11 @@
     <Content Include="Views\Admin\Laboratorians.aspx" />
     <Content Include="Views\Admin\Receptionist.aspx" />
     <Content Include="Views\Doctors\Prescriptions.aspx" />
+    <Content Include="Views\Doctors\Reports.aspx" />
     <Content Include="Views\Guest\Home.aspx" />
     <Content Include="Views\Laboratorian\LabTest.aspx" />
     <Content Include="Views\Login.aspx" />
+    <Content Include="Views\Patient\Description.aspx" />
     <Content Include="Views\Receptionist\Patients.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -156,6 +158,13 @@
     <Compile Include="Views\Doctors\Prescriptions.aspx.designer.cs">
       <DependentUpon>Prescriptions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Doctors\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Doctors\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Guest\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,6 +192,20 @@
     </Compile>
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\Description.aspx.cs">
+      <DependentUpon>Description.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Patient\Description.aspx.designer.cs">
+      <DependentUpon>Description.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\PatientMaster.Master.cs">
+      <DependentUpon>PatientMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Patient\PatientMaster.Master.designer.cs">
+      <DependentUpon>PatientMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Views\Receptionist\Patients.aspx.cs">
       <DependentUpon>Patients.aspx</DependentUpon>
@@ -227,6 +250,7 @@
     <Content Include="Views\Laboratorian\LaboratorianMaster.Master" />
     <Content Include="Views\Receptionist\ReceptionistMaster.Master" />
     <Content Include="Views\Doctors\DoctorMaster.Master" />
+    <Content Include="Views\Patient\PatientMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

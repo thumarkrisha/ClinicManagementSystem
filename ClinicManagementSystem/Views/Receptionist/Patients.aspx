@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Receptionist/ReceptionistMaster.Master" AutoEventWireup="true" CodeBehind="Patients.aspx.cs" Inherits="ClinicManagementSystem.Views.Receptionist.Patients" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Receptionist/ReceptionistMaster.Master" AutoEventWireup="true" CodeBehind="Patients.aspx.cs" Inherits="ClinicManagementSystem.Views.Receptionist.Patients" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Mybody" runat="server">
@@ -43,11 +43,25 @@
 
              <div class="mb-3">
                   <label for="AllergyTb" class="form-label">Allergies</label>
-                  <input type="text" class="form-control" id="AllergyTb" runat="server"/>
+                  <asp:TextBox  CssClass="form-control" ID="AllergyTb" runat="server"/>
                 </div>
-
+             
+              <div class="mb-3">
+               <label for="EmailTb" class="form-label">Email</label>
+                    <asp:RequiredFieldValidator ID="ReqEmail" ControlToValidate="EmailTb" SetFocusOnError="True" Display="Dynamic" ErrorMessage="Email is required" CssClass="text-danger" runat="server" />
+                    <asp:RegularExpressionValidator ID="RegEmail" ControlToValidate="EmailTb" SetFocusOnError="True" Display="Dynamic" ValidationExpression="^[^\s@]+@[^\s@]+\.[^\s@]+$" ErrorMessage="Invalid email address" CssClass="text-danger" runat="server" />
+                     <asp:TextBox ID="EmailTb" TextMode="Email" runat="server" CssClass="form-control"></asp:TextBox>
+             </div>
             
             </div>
+
+                  <div class="mb-3">
+                   <label for="PasswordTb" class="form-label">Password</label>
+  
+                       <asp:RequiredFieldValidator ID="ReqPassword" ControlToValidate="PasswordTb" SetFocusOnError="True" ErrorMessage="Password is required" CssClass="text-danger" runat="server" Display="Dynamic"/>
+                       <asp:RegularExpressionValidator ID="RegPassword" ControlToValidate="PasswordTb" SetFocusOnError="True" ValidationExpression=".{6,}" Display="Dynamic" ErrorMessage="Password must be at least 6 characters" CssClass="text-danger" runat="server" />
+                        <asp:TextBox ID="PasswordTb" runat="server" CssClass="form-control"></asp:TextBox>
+                 </div>
 
                <asp:Label ID="ErrMsg" runat="server" class="text-danger"></asp:Label><br />
                  <asp:Button ID="EditBtn" runat="server" class="btn btn-warning" Text="Edit" OnClick="EditBtn_Click"   ></asp:Button>

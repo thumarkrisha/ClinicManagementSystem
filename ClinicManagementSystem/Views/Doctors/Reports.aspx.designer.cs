@@ -11,43 +11,34 @@ namespace ClinicManagementSystem.Views.Doctors
 {
 
 
-    public partial class DoctorMaster
+    public partial class Reports
     {
 
         /// <summary>
-        /// head control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// form1 control.
+        /// ddlPatients control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPatients;
 
         /// <summary>
-        /// logoutbtn control.
+        /// gvReports control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton logoutbtn;
-
-        /// <summary>
-        /// Mybody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Mybody;
+        protected global::System.Web.UI.WebControls.GridView gvReports;
     }
 }

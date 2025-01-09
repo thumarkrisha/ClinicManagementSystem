@@ -36,6 +36,7 @@
                           <asp:ListItem>Doctor</asp:ListItem>
                           <asp:ListItem>Laboratorian</asp:ListItem>
                           <asp:ListItem>Receptionist</asp:ListItem>
+                           <asp:ListItem>Patient</asp:ListItem>
                       </asp:DropDownList>
                   </div>
 

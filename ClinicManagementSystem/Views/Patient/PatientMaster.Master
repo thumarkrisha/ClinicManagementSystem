@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DoctorMaster.master.cs" Inherits="ClinicManagementSystem.Views.Doctors.DoctorMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PatientMaster.master.cs" Inherits="ClinicManagementSystem.Views.Patient.PatientMaster" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-     <form id="form1" runat="server">
+    <form id="form2" runat="server">
        <nav class="navbar navbar-expand-lg navbar-warning bg-warning text-white">
   <a class="navbar-brand" href="#">Clinic</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,20 +24,20 @@
         <a class="nav-link" href="">Doctors</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Reports.aspx">Report</a>
+        <a class="nav-link" href="">Laboratorian</a>
       </li>
         <li class="nav-item">
          <a class="nav-link" href="">Receptionist</a>
       </li>
       <li class="nav-item">
-         <asp:LinkButton class="nav-link" ID="logoutbtn" runat="server" OnClick="logoutbtn_Click" CausesValidation="false">Logout</asp:LinkButton>
+         <asp:LinkButton class="nav-link" ID="logoutbtn" runat="server" OnClick="logoutbtn_Click" CausesValidation="false" >Logout</asp:LinkButton>
       </li>
       
     </ul>
     
   </div>
 </nav>
-   
+      
         <div>
             <asp:ContentPlaceHolder ID="Mybody" runat="server">
             </asp:ContentPlaceHolder>
@@ -45,3 +45,4 @@
     </form>
 </body>
 </html>
+

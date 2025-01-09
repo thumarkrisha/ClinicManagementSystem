@@ -28,7 +28,7 @@ namespace ClinicManagementSystem.Views
             }
             else if (RoleCb.SelectedIndex == 1)
             {
-                if(Email.Value=="admin@gmail.com" && Password.Value == "Admin")
+                if(Email.Text=="admin@gmail.com" && Password.Text == "Admin")
                 {
                     string role = "Admin";
                     Session["uid"] = 1;
@@ -102,6 +102,28 @@ namespace ClinicManagementSystem.Views
                     Session["role"] = role;
                     Session.Timeout = 10;
                     string r_url = "{0}/Patients.aspx";
+                    r_url = string.Format(r_url, role);
+
+                    Response.Redirect(r_url);
+                }
+            }
+            else if (RoleCb.SelectedIndex == 5)
+            {
+                string query = "select * from PatientTbl where Email = '{0}' and Password = '{1}'";
+                query = string.Format(query, Email.Text.ToString(), Password.Text.ToString());
+                DataTable dt = con.GetDatas(query);
+                if (dt.Rows.Count == 0)
+                {
+                    ErrMsg.Text = "Invalid Patient!!!";
+                }
+                else
+                {
+                    string role = "Patient";
+                    Session["uid"] = dt.Rows[0][0].ToString();
+                    Session["role"] = role;
+                    Session.Timeout = 10;
+                    string r_url = "{0}/Description.aspx" +
+                        "";
                     r_url = string.Format(r_url, role);
 
                     Response.Redirect(r_url);
